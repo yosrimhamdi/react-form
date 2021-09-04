@@ -5,7 +5,7 @@ import Form from './components/pages/Form';
 import Home from './components/pages/Form';
 import Admin from './components/pages/Admin';
 import Nav from './components/Nav';
-import './App.css';
+import './App.sass';
 
 function App() {
   return (

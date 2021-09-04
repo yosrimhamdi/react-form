@@ -1,16 +1,16 @@
 import React from 'react';
+import { Field, reduxForm } from 'redux-form';
 
-const Form = () => {
+import './Form.sass';
+
+const Form = props => {
+  console.log(props);
+
   return (
-    <form>
+    <form className="form">
       <div className="form-group">
         <label htmlFor="exampleInputEmail1">Title</label>
-        <input
-          style={{ marginBottom: '1em' }}
-          type="text"
-          className="form-control"
-          placeholder="Enter Title"
-        />
+        <input type="text" className="form-control" placeholder="Enter Title" />
       </div>
       <div className="form-group">
         <label htmlFor="exampleInputPassword1">Description</label>
@@ -20,15 +20,11 @@ const Form = () => {
           placeholder="Enter Description"
         />
       </div>
-      <button
-        style={{ marginTop: '1em' }}
-        type="submit"
-        className="btn btn-primary"
-      >
+      <button type="submit" className="btn btn-primary">
         Submit
       </button>
     </form>
   );
 };
 
-export default Form;
+export default reduxForm({ form: 'formExample' })(Form);
