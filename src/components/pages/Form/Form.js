@@ -3,12 +3,15 @@ import { Field, reduxForm } from 'redux-form';
 
 import Input from './Input';
 import './Form.sass';
+import validate from './validate';
 
-const Form = props => {
-  console.log(props);
+const Form = ({ handleSubmit }) => {
+  const onFormSubmit = formValues => {
+    console.log(formValues);
+  };
 
   return (
-    <form className="form">
+    <form className="form" onSubmit={handleSubmit(onFormSubmit)}>
       <Field name="title" component={Input} />
       <Field name="description" component={Input} />
       <button type="submit" className="btn btn-primary">
@@ -18,4 +21,4 @@ const Form = props => {
   );
 };
 
-export default reduxForm({ form: 'formExample' })(Form);
+export default reduxForm({ form: 'formExample', validate })(Form);
