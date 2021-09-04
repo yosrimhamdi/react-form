@@ -6,10 +6,10 @@ const Nav = () => (
     <Link to="/" style={{ marginRight: '1em' }}>
       Home
     </Link>
-    <Link to="/admin" style={{ marginRight: '1em' }}>
-      Admin Page
+    <Link to="/profile/2" style={{ marginRight: '1em' }}>
+      Profile 2
     </Link>
-    <Link to="/admin">Profile 2</Link>
+    <Link to="/admin">Admin Page</Link>
   </div>
 );
 
