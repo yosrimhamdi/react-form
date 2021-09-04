@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import ProtectedRoute from './ProtectedRoute';
+import ProtectedRoute from './components/ProtectedRoute';
 import Profile from './components/pages/Profile';
 import Home from './components/pages/Home';
 import Admin from './components/pages/Admin';
