@@ -4,7 +4,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import Form from './components/pages/Form/Form';
 import Home from './components/pages/Home';
 import Admin from './components/pages/Admin';
-import Nav from './components/Nav';
+import Nav from './components/Nav/Nav';
 import './App.sass';
 
 function App() {
