@@ -13,7 +13,7 @@ const Form = props => {
         <label htmlFor="exampleInputEmail1">Title</label>
         <input type="text" className="form-control" placeholder="Enter Title" />
       </div>
-      <Field name="title" component={Input} />
+      <Field name="description" component={Input} />
       <button type="submit" className="btn btn-primary">
         Submit
       </button>
