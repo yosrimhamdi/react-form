@@ -3,5 +3,5 @@ import { reducer as formReducer } from 'redux-form';
 
 export default combineReducers({
   auth: () => ({ user: null, isSignedIn: false }),
-  abc: formReducer,
+  form: formReducer,
 });

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 
+import Input from './Input';
 import './Form.sass';
 
 const Form = props => {
@@ -10,25 +11,9 @@ const Form = props => {
     <form className="form">
       <div className="form-group">
         <label htmlFor="exampleInputEmail1">Title</label>
-        <Field
-          name="title"
-          component={() => (
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Enter Title"
-            />
-          )}
-        />
+        <input type="text" className="form-control" placeholder="Enter Title" />
       </div>
-      <div className="form-group">
-        <label htmlFor="exampleInputPassword1">Description</label>
-        <input
-          type="text"
-          className="form-control"
-          placeholder="Enter Description"
-        />
-      </div>
+      <Field name="title" component={Input} />
       <button type="submit" className="btn btn-primary">
         Submit
       </button>
