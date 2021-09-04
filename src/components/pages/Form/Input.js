@@ -5,7 +5,7 @@ const Input = props => {
 
   return (
     <div className="form-group">
-      <label htmlFor="exampleInputPassword1">{input.name}</label>
+      <label>{input.name}</label>
       <input
         {...input}
         type="text"
