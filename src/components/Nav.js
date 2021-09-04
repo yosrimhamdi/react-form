@@ -1,14 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import './Nav.css';
+
 const Nav = () => (
-  <div>
-    <Link to="/" style={{ marginRight: '1em' }}>
-      Home
-    </Link>
-    <Link to="/profile/2" style={{ marginRight: '1em' }}>
-      Profile 2
-    </Link>
+  <div className="nav">
+    <Link to="/">Home</Link>
+    <Link to="/form">Form</Link>
     <Link to="/admin">Admin Page</Link>
   </div>
 );
