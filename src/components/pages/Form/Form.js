@@ -10,7 +10,16 @@ const Form = props => {
     <form className="form">
       <div className="form-group">
         <label htmlFor="exampleInputEmail1">Title</label>
-        <input type="text" className="form-control" placeholder="Enter Title" />
+        <Field
+          name="title"
+          component={() => (
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Enter Title"
+            />
+          )}
+        />
       </div>
       <div className="form-group">
         <label htmlFor="exampleInputPassword1">Description</label>
