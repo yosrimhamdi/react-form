@@ -1,16 +1,16 @@
 import React from 'react';
 
 const Input = props => {
-  console.log(props);
+  const { input } = props;
 
   return (
     <div className="form-group">
-      <label htmlFor="exampleInputPassword1">Description</label>
+      <label htmlFor="exampleInputPassword1">{input.name}</label>
       <input
-        {...props.input}
+        {...input}
         type="text"
         className="form-control"
-        placeholder="Enter Description"
+        placeholder={'Enter ' + input.name}
       />
     </div>
   );
