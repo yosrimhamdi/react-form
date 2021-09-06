@@ -1,7 +1,9 @@
 import React from 'react';
 import Error from './Error';
 
-const Input = ({ input, meta }) => {
+const Input = props => {
+  const { input, meta } = props;
+
   return (
     <div className="form-group">
       <label>{input.name}</label>

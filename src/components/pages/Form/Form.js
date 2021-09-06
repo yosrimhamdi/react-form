@@ -7,8 +7,10 @@ import './Form.sass';
 import validate from './validate';
 import createStream from '../../../redux/actions/createStream';
 
-const Form = ({ handleSubmit, createStream }) => {
-  const onFormSubmit = (formValues) => {
+const Form = props => {
+  const { handleSubmit, createStream } = props;
+
+  const onFormSubmit = formValues => {
     createStream(formValues);
   };
 
