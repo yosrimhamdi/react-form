@@ -4,7 +4,7 @@ const Error = ({ meta }) => {
   const { error, submitFailed } = meta;
 
   if (error && submitFailed) {
-    return <div>{error}</div>;
+    return <div style={{ color: 'red' }}>{error}</div>;
   }
 
   return null;
