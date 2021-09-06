@@ -4,7 +4,7 @@ import { reset } from 'redux-form';
 const createStream = formValues => dispatch => {
   dispatch({
     type: CREATE_STREAM,
-    payload: { ...formValues },
+    payload: formValues,
   });
 
   dispatch(reset('formExample'));
