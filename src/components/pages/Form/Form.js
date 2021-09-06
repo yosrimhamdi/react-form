@@ -1,13 +1,15 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
+import { connect } from 'react-redux';
 
 import Input from './Input';
 import './Form.sass';
 import validate from './validate';
+import createStream from '../../../redux/actions/createStream';
 
-const Form = ({ handleSubmit }) => {
-  const onFormSubmit = formValues => {
-    console.log(formValues);
+const Form = ({ handleSubmit, createStream }) => {
+  const onFormSubmit = (formValues) => {
+    createStream(formValues);
   };
 
   return (
@@ -21,4 +23,6 @@ const Form = ({ handleSubmit }) => {
   );
 };
 
-export default reduxForm({ form: 'formExample', validate })(Form);
+const wrappedForm = reduxForm({ form: 'formExample', validate })(Form);
+
+export default connect(null, { createStream })(wrappedForm);
